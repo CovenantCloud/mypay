@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "singularName": "transaction",
+    "pluralName": "transactions",
+    "displayName": "transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "montant": {
+      "type": "integer",
+      "required": true
+    },
+    "commission": {
+      "type": "integer",
+      "required": true
+    },
+    "total": {
+      "type": "integer",
+      "required": true
+    },
+    "service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "transactions"
+    },
+    "reseau": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reseau.reseau",
+      "inversedBy": "transactions"
+    },
+    "typeservice": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::typeservice.typeservice",
+      "inversedBy": "transactions"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "transactions"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "transactions"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

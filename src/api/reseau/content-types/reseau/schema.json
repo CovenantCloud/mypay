@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reseaus",
+  "info": {
+    "singularName": "reseau",
+    "pluralName": "reseaus",
+    "displayName": "reseau",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "etat": {
+      "type": "string",
+      "default": "ACTIF",
+      "required": true,
+      "private": true
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "reseau"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "reseau"
+    },
+    "transactions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transaction.transaction",
+      "mappedBy": "reseau"
+    }
+  }
+}

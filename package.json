@@ -1,0 +1,37 @@
+{
+  "name": "mypay",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.9",
+    "@localazy/strapi-plugin": "^0.1.18",
+    "@strapi/plugin-color-picker": "^4.14.3",
+    "@strapi/plugin-documentation": "^4.14.3",
+    "@strapi/plugin-graphql": "^4.14.3",
+    "@strapi/plugin-i18n": "4.14.3",
+    "@strapi/plugin-users-permissions": "4.14.3",
+    "@strapi/strapi": "4.14.3",
+    "better-sqlite3": "8.6.0",
+    "strapi-plugin-component-preview": "^1.0.9",
+    "strapi-plugin-generate-data": "^1.0.28"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "d58a0e72-6ff6-4b3e-b2fd-77b8e93e7c4a"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "typeservices",
+  "info": {
+    "singularName": "typeservice",
+    "pluralName": "typeservices",
+    "displayName": "typeservice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "etat": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true,
+      "private": true,
+      "default": "ACTIF"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "typeservice"
+    },
+    "transactions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transaction.transaction",
+      "mappedBy": "typeservice"
+    },
+    "icone": {
+      "type": "biginteger"
+    },
+    "iconColor": {
+      "type": "biginteger"
+    }
+  }
+}
